@@ -1,0 +1,277 @@
+/* _____________________Variables__________________ */
+:root{
+  --Dark-Gray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+/*______________________Reset Styles______________*/
+html,body{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-size:12px;
+}
+body{
+  background-color: var(--White);
+}
+
+h1,h2,h3,
+h4,h5,h6,
+ul,li,a{
+  padding:0;
+  margin: 0;
+  text-decoration-style: none;
+  list-style: none;
+  text-decoration: none;
+  color: var(--Black);
+}
+
+/* ___________Fonts___________ */
+
+body{
+  font-family: 'Spartan', sans-serif;
+  font-weight: 500;
+}
+/* General Styles */
+
+h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+h2{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+h5{
+  font-size:1.5rem;
+  font-weight: 400;
+}
+
+p{
+  color: var(--Dark-Gray);
+  font-size: 1rem;
+  line-height: 2;
+}
+
+
+/*____________Mobile Styles_______---*/
+.nav-main-div{
+  width: 100%;
+  position: relative;
+}
+
+.discoveries-div,
+.about-text-div{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.horizontal-flex-mobile{
+  display: flex;
+
+}
+
+.display-hide{
+  display: none;
+}
+.nav-bar{
+  height: 8rem;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: lowercase;
+  font-weight: bold;
+}
+.close-icon{
+  flex:0 5 auto;
+  margin-left:2%;
+
+}
+.nav-list{
+  flex:5 1 80%;
+  justify-content: space-evenly;
+
+}
+
+.hamburger-img{
+  position: absolute;
+  top:4rem;
+  left: 2rem;
+
+}
+
+.logo{
+  position: absolute;
+  left:45%;
+  top:4.25rem;
+  height:1.5rem;
+
+}
+
+.transparent-overlay{
+  position: fixed;
+  background-color: rgba(0,0,0,0.4);
+  margin-top:8rem;
+  min-height: 100%;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.hero-img{
+  width: 100%;
+  height: 100%;
+}
+
+.angles{
+  position: absolute;
+  left:75%;
+  bottom:1%;
+  justify-content: space-evenly;
+  background-color: var(--Black);
+  align-items: center;
+  overflow: hidden;
+  height: 5rem;
+  width: 25%;
+
+}
+.angle-div{
+  flex-basis:50%;
+  height: 100%;
+  padding-top:3rem;
+  text-align: center;
+
+}
+.angle-div:hover{
+  background-color: var(--Dark-Gray);
+  cursor:pointer;
+}
+
+.discovery{
+  padding: 6rem 0rem;
+}
+
+.discovery p{
+  padding: 1rem 0;
+
+}
+
+.shop-sub{
+  letter-spacing: 1.25rem;
+  text-transform: uppercase;
+  padding: 3rem 0.5rem 1rem;
+  width:80%;
+}
+
+.shop-sub:hover
+{
+
+  cursor:pointer;
+  filter: invert(87%) sepia(2%) saturate(0%) hue-rotate(136deg) brightness(78%) contrast(88%);
+
+}
+
+
+.dark-img,
+.light-img{
+  width: 100%;
+  max-height: 310px;
+}
+
+.about-text-div{
+  padding:4rem;
+}
+
+.about-title{
+  letter-spacing: .55rem;
+  text-transform: uppercase;
+  padding-top:2rem;
+}
+
+
+@media(min-width:1016px){
+  h5{
+    color: white;
+  }
+
+  .horizontal-flex-desktop{
+    display: flex;
+    justify-content: space-between;
+    max-height: 680px;
+  }
+
+  .nav-bar{
+    position: absolute;
+    width:60%;
+    display: flex;
+    padding:0;
+    margin:0;
+    left:16rem;
+    height: auto;
+    background-color: rgba(255,255,255,0);
+  }
+
+  .close-icon,
+  .hamburger-img{
+    display: none;
+  }
+
+
+  .logo{
+    height: 2rem;
+    left:4rem;
+  }
+
+  .nav-bar,
+  .logo{
+    top:4rem;
+  }
+
+  .discovery-slide-container{
+    height: 100%;
+  }
+
+  .shop-sub{
+    color:var(--Black);
+    width:100%;
+    font-size: 1.1rem;
+  }
+
+  .nav-main-div{
+    flex-basis: 60%;
+  }
+
+  .discoveries-div{
+    flex-basis:40%;
+  }
+
+  .discovery{
+    width: 80%;
+    margin:0 auto;
+  }
+
+  .angles{
+    left:100%;
+    bottom:0;
+  }
+
+  .about-div{
+    height: 20%;
+    max-height: 1000px;
+  }
+
+  .about-item{
+    max-width: 300px;
+  }
+
+  .about-text-div{
+    flex: 1 2 40%;
+    max-width: 40%;
+  }
+
+
+}
